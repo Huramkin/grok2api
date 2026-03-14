@@ -1,0 +1,25 @@
+name = "grok2api"
+main = "src/index.ts"
+compatibility_date = "2025-03-14"
+compatibility_flags = ["nodejs_compat"]
+
+# KV namespaces for config and token storage
+[[kv_namespaces]]
+binding = "CONFIG_KV"
+id = "YOUR_CONFIG_KV_NAMESPACE_ID"
+
+[[kv_namespaces]]
+binding = "TOKENS_KV"
+id = "YOUR_TOKENS_KV_NAMESPACE_ID"
+
+# Environment variables (set via `wrangler secret put` or dashboard)
+# API_KEY        - API authentication key (comma-separated for multiple)
+# APP_KEY        - Admin panel password (default: grok2api)
+# BASE_PROXY_URL - Proxy URL for Grok API requests
+# CF_CLEARANCE   - Cloudflare clearance cookie
+# USER_AGENT     - Browser user agent string
+# BROWSER        - Browser fingerprint identifier
+
+# Scheduled tasks for token refresh
+# [triggers]
+# crons = ["0 */2 * * *"]  # every 2 hours

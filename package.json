@@ -1,0 +1,19 @@
+{
+  "name": "grok2api-worker",
+  "version": "1.0.0",
+  "description": "Grok2API - Cloudflare Worker (TypeScript). OpenAI-compatible reverse proxy for Grok web APIs.",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250312.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.7.0"
+  }
+}
